@@ -44,15 +44,15 @@
             this.execute_btn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TME = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TIME = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.clock = new System.Windows.Forms.Timer(this.components);
-            this.start = new System.Windows.Forms.Button();
-            this.time_label = new System.Windows.Forms.Label();
             this.Numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Operacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Resultado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Lote = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clock = new System.Windows.Forms.Timer(this.components);
+            this.start = new System.Windows.Forms.Button();
+            this.time_label = new System.Windows.Forms.Label();
             this.reset = new System.Windows.Forms.Button();
             this.execute_groupbox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -61,44 +61,51 @@
             // 
             // add_process
             // 
-            this.add_process.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.add_process.Location = new System.Drawing.Point(12, 28);
+            this.add_process.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.add_process.Location = new System.Drawing.Point(12, 18);
             this.add_process.Name = "add_process";
-            this.add_process.Size = new System.Drawing.Size(103, 26);
+            this.add_process.Size = new System.Drawing.Size(103, 46);
             this.add_process.TabIndex = 0;
-            this.add_process.Text = "Agregar Proceso";
+            this.add_process.Text = "AGREGAR PROCESO\r\n";
             this.add_process.UseVisualStyleBackColor = false;
             this.add_process.Click += new System.EventHandler(this.add_process_Click);
             // 
             // wait_lot_label
             // 
             this.wait_lot_label.AutoSize = true;
+            this.wait_lot_label.BackColor = System.Drawing.Color.White;
+            this.wait_lot_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.wait_lot_label.ForeColor = System.Drawing.Color.Black;
             this.wait_lot_label.Location = new System.Drawing.Point(40, 77);
             this.wait_lot_label.Name = "wait_lot_label";
-            this.wait_lot_label.Size = new System.Drawing.Size(142, 13);
+            this.wait_lot_label.Size = new System.Drawing.Size(101, 30);
             this.wait_lot_label.TabIndex = 1;
-            this.wait_lot_label.Text = "Número de lotes pendientes:";
+            this.wait_lot_label.Text = "Número de lotes \r\npendientes:";
             // 
             // lot_label
             // 
             this.lot_label.AutoSize = true;
-            this.lot_label.Location = new System.Drawing.Point(40, 108);
+            this.lot_label.BackColor = System.Drawing.Color.White;
+            this.lot_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lot_label.ForeColor = System.Drawing.Color.Black;
+            this.lot_label.Location = new System.Drawing.Point(40, 117);
             this.lot_label.Name = "lot_label";
-            this.lot_label.Size = new System.Drawing.Size(63, 13);
+            this.lot_label.Size = new System.Drawing.Size(70, 15);
             this.lot_label.TabIndex = 2;
             this.lot_label.Text = "Lote actual:";
             // 
             // execute_groupbox
             // 
+            this.execute_groupbox.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.execute_groupbox.Controls.Add(this.tr_label);
             this.execute_groupbox.Controls.Add(this.tt_label);
             this.execute_groupbox.Controls.Add(this.tme_label);
             this.execute_groupbox.Controls.Add(this.op_label);
             this.execute_groupbox.Controls.Add(this.id_label);
             this.execute_groupbox.Controls.Add(this.name_label);
-            this.execute_groupbox.Location = new System.Drawing.Point(267, 77);
+            this.execute_groupbox.Location = new System.Drawing.Point(267, 117);
             this.execute_groupbox.Name = "execute_groupbox";
-            this.execute_groupbox.Size = new System.Drawing.Size(215, 243);
+            this.execute_groupbox.Size = new System.Drawing.Size(215, 275);
             this.execute_groupbox.TabIndex = 3;
             this.execute_groupbox.TabStop = false;
             this.execute_groupbox.Text = "Proceso en ejecución";
@@ -106,6 +113,7 @@
             // tr_label
             // 
             this.tr_label.AutoSize = true;
+            this.tr_label.BackColor = System.Drawing.Color.White;
             this.tr_label.Location = new System.Drawing.Point(22, 212);
             this.tr_label.Name = "tr_label";
             this.tr_label.Size = new System.Drawing.Size(91, 13);
@@ -115,6 +123,7 @@
             // tt_label
             // 
             this.tt_label.AutoSize = true;
+            this.tt_label.BackColor = System.Drawing.Color.White;
             this.tt_label.Location = new System.Drawing.Point(19, 176);
             this.tt_label.Name = "tt_label";
             this.tt_label.Size = new System.Drawing.Size(107, 13);
@@ -124,6 +133,7 @@
             // tme_label
             // 
             this.tme_label.AutoSize = true;
+            this.tme_label.BackColor = System.Drawing.Color.White;
             this.tme_label.Location = new System.Drawing.Point(19, 143);
             this.tme_label.Name = "tme_label";
             this.tme_label.Size = new System.Drawing.Size(130, 13);
@@ -133,6 +143,7 @@
             // op_label
             // 
             this.op_label.AutoSize = true;
+            this.op_label.BackColor = System.Drawing.Color.White;
             this.op_label.Location = new System.Drawing.Point(22, 107);
             this.op_label.Name = "op_label";
             this.op_label.Size = new System.Drawing.Size(59, 13);
@@ -142,6 +153,7 @@
             // id_label
             // 
             this.id_label.AutoSize = true;
+            this.id_label.BackColor = System.Drawing.Color.White;
             this.id_label.Location = new System.Drawing.Point(22, 73);
             this.id_label.Name = "id_label";
             this.id_label.Size = new System.Drawing.Size(21, 13);
@@ -151,6 +163,7 @@
             // name_label
             // 
             this.name_label.AutoSize = true;
+            this.name_label.BackColor = System.Drawing.Color.White;
             this.name_label.Location = new System.Drawing.Point(19, 40);
             this.name_label.Name = "name_label";
             this.name_label.Size = new System.Drawing.Size(50, 13);
@@ -160,46 +173,52 @@
             // end_lot_label
             // 
             this.end_lot_label.AutoSize = true;
-            this.end_lot_label.Location = new System.Drawing.Point(488, 77);
+            this.end_lot_label.BackColor = System.Drawing.Color.White;
+            this.end_lot_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.end_lot_label.ForeColor = System.Drawing.Color.Black;
+            this.end_lot_label.Location = new System.Drawing.Point(488, 117);
             this.end_lot_label.Name = "end_lot_label";
-            this.end_lot_label.Size = new System.Drawing.Size(108, 13);
+            this.end_lot_label.Size = new System.Drawing.Size(126, 15);
             this.end_lot_label.TabIndex = 4;
             this.end_lot_label.Text = "Procesos terminados:";
             // 
             // crono_label
             // 
             this.crono_label.AutoSize = true;
-            this.crono_label.Location = new System.Drawing.Point(488, 35);
+            this.crono_label.BackColor = System.Drawing.Color.White;
+            this.crono_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.crono_label.ForeColor = System.Drawing.Color.Black;
+            this.crono_label.Location = new System.Drawing.Point(534, 51);
             this.crono_label.Name = "crono_label";
-            this.crono_label.Size = new System.Drawing.Size(110, 13);
+            this.crono_label.Size = new System.Drawing.Size(127, 15);
             this.crono_label.TabIndex = 5;
             this.crono_label.Text = "Tiempo Transcurrido: ";
             // 
             // execute_btn
             // 
-            this.execute_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.execute_btn.Location = new System.Drawing.Point(150, 28);
+            this.execute_btn.BackColor = System.Drawing.Color.SteelBlue;
+            this.execute_btn.Location = new System.Drawing.Point(138, 18);
             this.execute_btn.Name = "execute_btn";
-            this.execute_btn.Size = new System.Drawing.Size(103, 26);
+            this.execute_btn.Size = new System.Drawing.Size(103, 46);
             this.execute_btn.TabIndex = 6;
-            this.execute_btn.Text = "Cargar lote";
+            this.execute_btn.Text = "CARGAR LOTE";
             this.execute_btn.UseVisualStyleBackColor = false;
             this.execute_btn.Click += new System.EventHandler(this.execute_btn_Click);
             // 
             // dataGridView1
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nombre,
-            this.TME});
+            this.TIME});
             this.dataGridView1.Enabled = false;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveBorder;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 135);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 150);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(241, 293);
+            this.dataGridView1.Size = new System.Drawing.Size(241, 242);
             this.dataGridView1.TabIndex = 7;
             // 
             // Nombre
@@ -207,14 +226,14 @@
             this.Nombre.HeaderText = "Nombre";
             this.Nombre.Name = "Nombre";
             // 
-            // TME
+            // TIME
             // 
-            this.TME.HeaderText = "TME";
-            this.TME.Name = "TME";
+            this.TIME.HeaderText = "TIME";
+            this.TIME.Name = "TIME";
             // 
             // dataGridView2
             // 
-            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
+            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -225,35 +244,10 @@
             this.Lote});
             this.dataGridView2.Enabled = false;
             this.dataGridView2.GridColor = System.Drawing.SystemColors.ActiveBorder;
-            this.dataGridView2.Location = new System.Drawing.Point(489, 135);
+            this.dataGridView2.Location = new System.Drawing.Point(488, 142);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(441, 293);
+            this.dataGridView2.Size = new System.Drawing.Size(441, 250);
             this.dataGridView2.TabIndex = 8;
-            // 
-            // clock
-            // 
-            this.clock.Interval = 1000;
-            this.clock.Tick += new System.EventHandler(this.clock_Tick);
-            // 
-            // start
-            // 
-            this.start.BackColor = System.Drawing.Color.Turquoise;
-            this.start.Location = new System.Drawing.Point(289, 28);
-            this.start.Name = "start";
-            this.start.Size = new System.Drawing.Size(75, 26);
-            this.start.TabIndex = 9;
-            this.start.Text = "Iniciar";
-            this.start.UseVisualStyleBackColor = false;
-            this.start.Click += new System.EventHandler(this.start_Click);
-            // 
-            // time_label
-            // 
-            this.time_label.AutoSize = true;
-            this.time_label.Location = new System.Drawing.Point(604, 35);
-            this.time_label.Name = "time_label";
-            this.time_label.Size = new System.Drawing.Size(13, 13);
-            this.time_label.TabIndex = 10;
-            this.time_label.Text = "0";
             // 
             // Numero
             // 
@@ -275,14 +269,42 @@
             this.Lote.HeaderText = "Lote";
             this.Lote.Name = "Lote";
             // 
+            // clock
+            // 
+            this.clock.Interval = 1000;
+            this.clock.Tick += new System.EventHandler(this.clock_Tick);
+            // 
+            // start
+            // 
+            this.start.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.start.Location = new System.Drawing.Point(257, 18);
+            this.start.Name = "start";
+            this.start.Size = new System.Drawing.Size(91, 46);
+            this.start.TabIndex = 9;
+            this.start.Text = "INICIAR";
+            this.start.UseVisualStyleBackColor = false;
+            this.start.Click += new System.EventHandler(this.start_Click);
+            // 
+            // time_label
+            // 
+            this.time_label.AutoSize = true;
+            this.time_label.BackColor = System.Drawing.Color.White;
+            this.time_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.time_label.ForeColor = System.Drawing.Color.Black;
+            this.time_label.Location = new System.Drawing.Point(667, 51);
+            this.time_label.Name = "time_label";
+            this.time_label.Size = new System.Drawing.Size(14, 15);
+            this.time_label.TabIndex = 10;
+            this.time_label.Text = "0";
+            // 
             // reset
             // 
-            this.reset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.reset.Location = new System.Drawing.Point(407, 30);
+            this.reset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.reset.Location = new System.Drawing.Point(371, 18);
             this.reset.Name = "reset";
-            this.reset.Size = new System.Drawing.Size(75, 23);
+            this.reset.Size = new System.Drawing.Size(96, 46);
             this.reset.TabIndex = 11;
-            this.reset.Text = "Reiniciar";
+            this.reset.Text = "REINICIAR";
             this.reset.UseVisualStyleBackColor = false;
             this.reset.Click += new System.EventHandler(this.reset_Click);
             // 
@@ -290,7 +312,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BackgroundImage = global::Procesamiento_por_lotes.Properties.Resources.images;
             this.ClientSize = new System.Drawing.Size(949, 450);
             this.Controls.Add(this.reset);
             this.Controls.Add(this.time_label);
@@ -342,6 +365,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Resultado;
         private System.Windows.Forms.DataGridViewTextBoxColumn Lote;
         private System.Windows.Forms.Button reset;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TIME;
     }
 }
 

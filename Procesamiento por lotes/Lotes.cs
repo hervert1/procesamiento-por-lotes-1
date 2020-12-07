@@ -65,17 +65,19 @@ namespace Procesamiento_por_lotes
                     dataGridView2.Rows.Add();
                     dataGridView2.Rows[act].Cells[0].Value = lista[act].getNum();
                     dataGridView2.Rows[act].Cells[1].Value = lista[act].getOperacion();
+             
                     dataGridView2.Rows[act].Cells[2].Value = lista[act].getResultado();
-                    dataGridView2.Rows[act].Cells[3].Value = (act / 3) + 1;
+                    dataGridView2.Rows[act].Cells[3].Value = (act / 4) + 1;
                 }
 
-                if ((act/3+1) != ((act+1)/3+1)){
+                if ((act/4+1) != ((act+1)/4+1)){
                     // Mostrar el total de lotes
                     dataGridView1.Rows.Clear();
                     lotes--;
                     lot_act++;
                     wait_lot_label.Text = "Número de lotes pendientes: " + (lotes-1);
                     lot_label.Text = "Lote actual: " + lot_act;
+                    //end_lote_label.Text = "Procesos Termonados:  " + procesos;
 
                     if (lista.Count() != (act+1))
                     {
@@ -96,6 +98,12 @@ namespace Procesamiento_por_lotes
                                     dataGridView1.Rows.Add();
                                     dataGridView1.Rows[2].Cells[0].Value = lista[act + 3].getProgramador();
                                     dataGridView1.Rows[2].Cells[1].Value = lista[act + 3].getTME();
+                                    if (lista[act + 4] != null)
+                                    {
+                                        dataGridView1.Rows.Add();
+                                        dataGridView1.Rows[3].Cells[0].Value = lista[act + 4].getProgramador();
+                                        dataGridView1.Rows[3].Cells[1].Value = lista[act + 4].getTME();
+                                    }
                                 }
                             }
                         }
@@ -162,12 +170,12 @@ namespace Procesamiento_por_lotes
                     line = sr.ReadLine();
                 }
                 sr.Close();
-                while ((lista.Count() % 3) != 0){
+                while ((lista.Count() % 4) != 0){
                     lista.Add(null);
                 }
                 // Obtener el total de lotes a procesar
-                //lotes = (procesos / 3) + (procesos%3);
-                lotes = (lista.Count()/3) + (lista.Count()%3);
+                //lotes = (procesos / 4) + (procesos%4);
+                lotes = (lista.Count()/4) + (lista.Count()%4);
             }
             finally{
                 // Mostrar el total de lotes
@@ -187,6 +195,11 @@ namespace Procesamiento_por_lotes
                             dataGridView1.Rows.Add();
                             dataGridView1.Rows[2].Cells[0].Value = lista[2].getProgramador();
                             dataGridView1.Rows[2].Cells[1].Value = lista[2].getTME();
+                            if (lista[3] != null){
+                                dataGridView1.Rows.Add();
+                                dataGridView1.Rows[3].Cells[0].Value = lista[3].getProgramador();
+                                dataGridView1.Rows[3].Cells[1].Value = lista[3].getTME();
+                        }
                         }
                     }
                 }
